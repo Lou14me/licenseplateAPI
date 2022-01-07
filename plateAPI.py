@@ -22,7 +22,7 @@ def add():
     if  plate1 and label1:
         db = pymysql.connect(host="localhost",port = 3306, user="root", password="password", database="sql_tutorial")
         cursor = db.cursor()
-        sql = "insert into car(plate,label) values ('"+ plate1 +"'," +label1+ ")"
+        sql = "insert into car(plate,label) values ('"+ plate1 +"','" +label1+ "')"
         print(sql)
         try:
             cursor.execute(sql)
